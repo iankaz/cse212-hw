@@ -145,7 +145,7 @@ public static class Recursion
         foreach (var (dx, dy) in new ValueTuple<int, int>[] { (0, 1), (1, 0), (0, -1), (-1, 0) })
         {
             int nx = x + dx, ny = y + dy;
-            if (maze.IsValidMove(nx, ny, currPath))
+            if (maze.IsValidMove(currPath, nx, ny))
             {
                 SolveMaze(results, maze, nx, ny, currPath);
             }
